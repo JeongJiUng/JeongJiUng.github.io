@@ -9,7 +9,7 @@ image: >-
   https://wallpaperstream.com/wallpapers/full/linux-tux-logos/Linux-Tux-Logo-HD-Wallpaper.jpg
 optimized_image: >-
   https://wallpaperstream.com/wallpapers/full/linux-tux-logos/Linux-Tux-Logo-HD-Wallpaper.jpg
-category: Linux
+category: linux
 tags:
   - linux
   - server
