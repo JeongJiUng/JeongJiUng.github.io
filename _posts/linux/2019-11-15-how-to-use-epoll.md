@@ -74,3 +74,41 @@ struct epoll_event
     epoll_data_t data;  /* User data variable */
 }
 ```
+
+<table>
+  <thead>
+    <tr>
+      <th>Events</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>EPOLLIN</td>
+      <td>수신할 데이터가 있다</td>
+    </tr>
+    <tr>
+      <td>EPOLLOUT</td>
+      <td>송신 가능하다</td>
+    </tr>
+    <tr>
+      <td>EPOLLPRI</td>
+      <td>중요한 데이터(OOB) 발생</td>
+    </tr>
+    <tr>
+      <td>EPOLLRDHUD</td>
+      <td>연결 종료 또는 Half-close 발생</td>
+    </tr>
+    <tr>
+      <td>EPOLLERR</td>
+      <td>에러 발생</td>
+    </tr>
+    <tr>
+      <td>EPOLLET</td>
+      <td>엣지 트리거 방식으로 설정</td>
+    </tr>
+    <tr>
+      <td>EPOLLONESHOT</td>
+      <td>한번만 이벤트 받음</td>
+    </tr>
+  </tfoot>
+</table>
