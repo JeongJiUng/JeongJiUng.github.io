@@ -5,6 +5,10 @@ title: Epoll의 기초 개념 및 사용 방법
 subtitle: Linux I/O 통지모델
 description: >-
   Linux 10K를 위한 I/O 통지모델
+image: >-
+  https://wallpaperstream.com/wallpapers/full/linux-tux-logos/Linux-Tux-Logo-HD-Wallpaper.jpg
+optimized_image: >-
+  https://wallpaperstream.com/wallpapers/full/linux-tux-logos/Linux-Tux-Logo-HD-Wallpaper.jpg
 category: Linux
 tags:
   - linux
