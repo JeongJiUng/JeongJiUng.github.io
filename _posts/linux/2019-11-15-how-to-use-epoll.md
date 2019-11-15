@@ -56,3 +56,21 @@ epoll_ctl은 epoll에 fd들을 등록/수정/삭제를 하는 함수인데 일�
     </tr>
   </tfoot>
 </table>
+* fd : epfd에 등록할 관심있는 파일 디스크립터 값
+* event : epfd에 등록할 관심있는 fd가 어떤 이벤트가 발생할 때 관심을 가질지에 대한 구조체. 관찰 대상의 관찰 이벤트 유형
+
+```c++
+typedef union epoll_data
+{
+    void *ptr;
+    int fd;
+    __uint32_t u32;
+    __uint64_t u64;
+} epoll_data_t
+
+struct epoll_event 
+{
+    __uint32_t events;  /* Epoll events */
+    epoll_data_t data;  /* User data variable */
+}
+```
