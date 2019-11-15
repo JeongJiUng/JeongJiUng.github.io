@@ -136,4 +136,4 @@ epoll_wait는 관심있는 fd들에 무슨일이 일어났는지 조사한다. �
 
 
 ## Edge Trigger & Level Trigger
-> <strong>Edge Trigger</strong>
+> **Edge Trigger**
