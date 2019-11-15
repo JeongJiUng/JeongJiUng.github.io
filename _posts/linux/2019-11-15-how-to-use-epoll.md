@@ -46,5 +46,13 @@ epoll_ctl은 epoll에 fd들을 등록/수정/삭제를 하는 함수인데 일�
       <td>EPOLL_CTL_ADDD</td>
       <td>fd를 epfd의 관심 목록에 추가, 이미 목록에 존재한다면 EEXIST에러를 발생 시킨다. event 집합은 *event에 저장된다.</td>
     </tr>
+    <tr>
+      <td>EPOLL_CTL_MODD</td>
+      <td>*event에 저장된 정보를 이용해 fd설정 변경. 관심 목록에 없는 fd라면 ENOENT에러를 발생시킨다.</td>
+    </tr>
+    <tr>
+      <td>EPOLL_CTL_DEL</td>
+      <td>epfd에서 fd를 제공한다. epfd관심 목록에 없는 fd를 제거하려면 ENOENT 에러를 발생한다. fd를 닫으면 epoll관심 목록에서 자동 제거된다.</td>
+    </tr>
   </tfoot>
 </table>
