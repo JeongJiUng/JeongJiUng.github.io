@@ -370,6 +370,8 @@ int main()
 
 ```
 
+ [![img](https://t1.daumcdn.net/tistory_admin/assets/blog/218537a95dbea98ea83c6e89a3efac5147471d73/blogs/image/extension/unknown.gif?_version_=218537a95dbea98ea83c6e89a3efac5147471d73) main.cpp](https://rammuking.tistory.com/attachment/cfile23.uf@99B446495C3323FD057700.cpp) 
+
  ## 참고
 
 [https://jacking75.github.io/choiheungbae/%EB%AC%B8%EC%84%9C/epoll%EC%9D%84%20%EC%82%AC%EC%9A%A9%ED%95%9C%20%EB%B9%84%EB%8F%99%EA%B8%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D.pdf](https://jacking75.github.io/choiheungbae/문서/epoll을 사용한 비동기 프로그래밍.pdf)
