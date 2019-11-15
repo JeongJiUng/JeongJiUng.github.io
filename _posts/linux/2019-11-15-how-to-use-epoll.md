@@ -133,3 +133,7 @@ epoll_wait는 관심있는 fd들에 무슨일이 일어났는지 조사한다. �
 > 별도 thread를 구성하여 이 thread 가 입출력을 전담하도록 프로그램을 작성하고자 하는 경우에는, 당연히 timeout을 (-1)로 설정하여 남는 시간을 다른 thread, 혹은 운영체제에 돌려 주도록 한다.
 >
 > [link](http://biscuit.cafe24.com/moniwiki/wiki.php/epoll#s-4)
+
+
+## Edge Trigger & Level Trigger
+> <strong>Edge Trigger</strong>
