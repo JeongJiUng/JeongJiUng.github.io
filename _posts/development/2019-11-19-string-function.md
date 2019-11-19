@@ -1,8 +1,8 @@
 ---
 date: 2019-11-19 17:02:05
 layout: post
-title: String 함수들
-subtitle: 문자열 처리 함수
+title: 문자열 처리 함수
+subtitle: 문자열 처리 함수들
 description: >-
   문자열 처리를 위한 다양한 함수. strstr, strcat, strcmp 등
 image: >-
@@ -12,7 +12,7 @@ optimized_image: >-
 category: development
 tags:
   - development
-  - string
+  - 문자열
   - c
   - c++
 author: Stop_Male
@@ -108,4 +108,73 @@ The
 ![placehoder](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/unit45-3.png?raw=true)
 
 ![placeholder](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/unit45-4.png?raw=true)
+
+### strcmp(문자열1, 문자열2), strncmp(문자열1, 문자열2, 처음 부터 비교할 최대 문자의 개수)
+
+```c++
+int strcmp(const char* _str1, const char* _str2)
+int strncmp(const char* _str1, const char* _str2, int n)
+```
+
+* 대소문자 구분.
+* return value
+  * -1 : ASCII 코드 기준으로 문자열2가 클 때.
+  * 0 : ASCII 코드 기준으로 두 문자열이 같을 때.
+  * 1 : ASCII 코드 기준으로 문자열1이 클 때.
+* 리눅스 OS는 return value가 ASCII 코드 값의 차이로 반환된다.
+
+### strcpy(복사될 문자열, 원본 문자열), strncpy(복사될 문자열, 원본 문자열, 크기)
+
+```c++
+char* strcpy(char* dest, const char* origin)
+char* strncpy(char* dest, const char* origin, size_t n)
+```
+
+* 복사된 결과가 저장될 배열의 크기는 반드시 NULL까지 들어갈 수 있어야 한다. 크기가 더 작다면 복사가 되더라도 문자열이 정상적으로 출력되지 않는다(버퍼 오버런 발생 가능성 존재). 따라서 "hello" 문자열이 복사되려면 배열의 크기는 최소한 6이 되어야 한다.
+
+* strncpy는 origin에 있는 문자열을 dest로 복사 하는데, n 만큼 복사한다.
+
+  * n <= sizeof(origin)
+  * n <= sizeof(dest)
+
+* 문자열 끝('\0', NULL 문자) 까지 복사를 한다. 따라서, 다음과 같은 코드의 경우 복사 결과는 다음과 같다.
+
+* ```c++
+  char origin[] = "123";
+  char dest1[] = "12345";
+  strcpy(dest1, origin);
+  
+  /** 메모리 결과 **/
+  dest1 : 1 2 3 \0 4 5 \0;
+  /** 출력 결과 **/
+  123
+  ```
+
+* 출력 함수는 문자열의 NULL 문자까지만 출력하기 때문에 123만 출력이 된다.
+
+* 만약, "12345" 이런식으로 문자열을 연결하고 싶다면, origin의 마지막 널문자만 지워주면 되므로 다음과같이 코드를 수정하면 된다.
+
+* ```c++
+  char origin[] = "123";
+  char dest1[] = "12345";
+  strncpy(dest1, origin, sizeof(origin) - 1);
+  
+  /** 메모리 결과 **/
+  dest1 : 1 2 3 4 5 \0;
+  /** 출력 결과 **/
+  12345
+  ```
+
+### strcat(복사될 문자열, 원본 문자열), strncat(복사될 문자열, 원본 문자열, 크기)
+
+```c++
+char* strcat(char* dest, const char* origin)
+char* strncat(char* dest, const char* origin, size_t n)
+```
+
+* origin에 있는 문자열을 dest 뒤쪽에 이어 붙이는 함수.
+* dest 문자열 끝에 있는 '\0'은 사라지고 그 위치에 origin이 바로 붙어버리는게 특징.
+* strncat의 경우, origin에 있는 문자열 n개를 dest 뒤쪽에 이어 붙이는 함수.
+* dset의 길이는 origin과 합쳐도 남을 정도로 충분히 길어야 한다.
+* 마지막에 붙여 넣은 문자열 끝에만 '\0'이 붙으며, strncpy를 사용하여 origin에서 n번째 문자까지만 잘라 넣어서 합친 문자열 끝에도 '\0'가 붙는다는 사실을 기억해야 한다.
 
