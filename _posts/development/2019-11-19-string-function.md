@@ -101,10 +101,11 @@ The
 
 * strtok 함수는 문자열을 새로 생성해서 반환하는 것이 아니라 자르는 부분을 널 문자(NULL)로 채운 뒤 잘린 문자열의 포인터를 반환한다. 따라서 원본 문자열의 내용을 바꾸므로 사용에 주의해야 한다.
 
-![placeholder](C:\Users\WorkBench\CloudStation\github_blog\jeongjiung.github.io\_images\unit45-1.png)
+![placeholder](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/unit45-1.png?raw=true)
 
-![placeholder](C:\Users\WorkBench\CloudStation\github_blog\jeongjiung.github.io\_images\unit45-2.png)
+![placeholder](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/unit45-2.png?raw=true)
 
-![placehoder](C:\Users\WorkBench\CloudStation\github_blog\jeongjiung.github.io\_images\unit45-3.png)
+![placehoder](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/unit45-3.png?raw=true)
 
-![placeholder](C:\Users\WorkBench\CloudStation\github_blog\jeongjiung.github.io\_images\unit45-4.png)
+![placeholder](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/unit45-4.png?raw=true)
+
