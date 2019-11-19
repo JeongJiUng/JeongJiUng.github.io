@@ -57,3 +57,46 @@ char* strrchr(char* const_string, int const_ch)
 int sprintf(char* const_buffer, char const* const_format, ...)
 ```
 
+### strtok(대상 문자열, 기준 문자)
+
+```c++
+char* strtok(char* _string, char const* _delimiter)
+```
+
+* 특정 문자를 기준으로 문자열 자르기.
+* 자른 문자열을 반환, 더 이상 자를 문자열이 없으면 NULL을 반환.
+
+```c++
+int main()
+{
+    char s1[30] = "The Littel Prince";
+    char* ptr = strtok(s1, " ");
+    
+    while (ptr != NULL)
+    {
+        printf("%s\n", ptr);
+        ptr = strtok(NULL, " ");
+    }
+    
+    return 0;
+}
+```
+
+```c++
+/*** 실행 결과. ***/
+The
+Littel
+Prince
+```
+
+* ptr = strtok(NULL, " ")처럼 대상 문자열 부분에 NULL을 넣어주면, 직전 strtok 함수에서 처리했던 문자열에서 잘린 문자열 만큼 다음 문자로 이동한 뒤 다음 문자열을 자른다. 만약 ptr = strtok(ptr, " ") 처럼 잘린 문자열의 포인터를 다시 넣었을 때는 다음 문자로 이동하지 못하고 처음에 나오는 문자열만 계속 자르게 된다. 즉, 다음과 같은 결과가 나온다.
+
+```c++
+/*** 실행 결과. ***/
+The
+The
+The
+...
+```
+
+* strtok 함수는 문자열을 새로 생성해서 반환하는 것이 아니라 자르는 부분을 널 문자(NULL)로 채운 뒤 잘린 문자열의 포인터를 반환한다. 따라서 원본 문자열의 내용을 바꾸므로 사용에 주의해야 한다.
