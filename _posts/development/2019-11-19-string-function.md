@@ -22,7 +22,7 @@ paginate: true
 ### strstr (대상 문자열, 검색할 문자열)
 
 ```c++
-char* strstr(char * const_string, char const* const_substring)
+char* strstr(char * const_string, const char* const_substring)
 ```
 
 * 문자열 안에서 문자열 검색.
@@ -43,7 +43,7 @@ char* strchr(char* const_string, int const_ch)
 ### strrchar(대상 문자열, 검색할 문자)
 
 ```c++
-char* strrchr(char* const_string, int const_ch)
+char* strrchr(const char* _string, const int _ch)
 ```
 
 * 문자열 안에서 문자 검색.
@@ -54,16 +54,20 @@ char* strrchr(char* const_string, int const_ch)
 ### sprintf(배열, 서식, 값)
 
 ```c++
-int sprintf(char* const_buffer, char const* const_format, ...)
+int sprintf(const char* _buffer, const char* _format, ...)
 ```
+
+* _buffer에 _format 형식으로 문자열 저장.
 
 ### strtok(대상 문자열, 기준 문자)
 
 ```c++
-char* strtok(char* _string, char const* _delimiter)
+char* strtok(char* _string, const char* _delimiter)
 ```
 
 * 특정 문자를 기준으로 문자열 자르기.
+* 특정 문자(기준 문자) _delimiter는 한 번에 여러 개를 지정할 수 있다.
+  * "-T:" : -, T, 콜론을 기준으로 문자열 자름.
 * 자른 문자열을 반환, 더 이상 자를 문자열이 없으면 NULL을 반환.
 
 ```c++
@@ -177,4 +181,3 @@ char* strncat(char* dest, const char* origin, size_t n)
 * strncat의 경우, origin에 있는 문자열 n개를 dest 뒤쪽에 이어 붙이는 함수.
 * dset의 길이는 origin과 합쳐도 남을 정도로 충분히 길어야 한다.
 * 마지막에 붙여 넣은 문자열 끝에만 '\0'이 붙으며, strncpy를 사용하여 origin에서 n번째 문자까지만 잘라 넣어서 합친 문자열 끝에도 '\0'가 붙는다는 사실을 기억해야 한다.
-
