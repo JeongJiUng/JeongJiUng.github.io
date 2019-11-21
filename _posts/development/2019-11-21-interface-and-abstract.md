@@ -11,9 +11,6 @@ tags:
   - interface
   - abstract class
   - virtual function
-  - c
-  - c++
-  - java
 author: Stop_Male
 paginate: true
 ---
