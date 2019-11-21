@@ -1,4 +1,4 @@
-
+---
 date: 2019-11-21 19:11:00
 layout: post
 title: 인터페이스와 추상 클래스 차이
@@ -16,8 +16,7 @@ tags:
   - java
 author: Stop_Male
 paginate: true
-
-
+---
 ## 가상함수
 
 ### 일반 가상함수
