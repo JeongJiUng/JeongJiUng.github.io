@@ -181,3 +181,4 @@ char* strncat(char* dest, const char* origin, size_t n)
 * strncat의 경우, origin에 있는 문자열 n개를 dest 뒤쪽에 이어 붙이는 함수.
 * dset의 길이는 origin과 합쳐도 남을 정도로 충분히 길어야 한다.
 * 마지막에 붙여 넣은 문자열 끝에만 '\0'이 붙으며, strncpy를 사용하여 origin에서 n번째 문자까지만 잘라 넣어서 합친 문자열 끝에도 '\0'가 붙는다는 사실을 기억해야 한다.
+
