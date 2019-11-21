@@ -8,7 +8,12 @@ description: >-
 category: development
 tags:
   - development
-  - class
+  - Memory Allocator
+  - new
+  - malloc
+  - calloc
+  - realloc
+  - c
   - c++
 author: Stop_Male
 paginate: true
