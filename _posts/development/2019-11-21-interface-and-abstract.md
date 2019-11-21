@@ -1,19 +1,18 @@
 ---
-date: 2019-11-21 19:11:00
+date: 2019-11-21 21:43:00
 layout: post
-title: 인터페이스와 추상 클래스 차이
-subtitle: 인터페이스와 추상 클래스 차이
+title: 인터페이스와 추상 클래스
+subtitle: 인터페이스와 추상 클래스
 description: >-
-	인터페이스와 추상 클래스의 차이를 알아보자.
+  인터페이스와 추상 클래스
 category: development
 tags:
-	- development
-	- interface
-	- abstract class
-	- virtual function
-	- c
-	- c++
-	- java
+  - development
+  - interface
+  - abstract class
+  - c
+  - c++
+  - java
 author: Stop_Male
 paginate: true
 ---
