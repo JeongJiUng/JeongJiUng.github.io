@@ -7,13 +7,13 @@ description: >-
 	인터페이스와 추상 클래스의 차이를 알아보자.
 category: development
 tags:
-  - development
-  - interface
-  - abstract class
-  - virtual function
-  - c
-  - c++
-  - java
+	- development
+	- interface
+	- abstract class
+	- virtual function
+	- c
+	- c++
+	- java
 author: Stop_Male
 paginate: true
 ---
