@@ -35,6 +35,11 @@ paginate: true
 ## 4-Way Handshake
 
 - TCP 연결을 종료할 때
+- Initiator를 클라이언트, Receiver를 서버로 가정.
 
 ![image](https://github.com/JeongJiUng/jeongjiung.github.io/blob/master/_images/1280px-TCP_CLOSE.svg.png?raw=true)
 
+1. 클라이언트에서는 세션 종료를 시작한다는 의미(shutdown)로 서버에 FIN 패킷을 전송하고 FIN_WAIT_1 상태가 된다.
+2. 서버에서는 FIN 패킷을 받고 잘 받았다는 의미로 ACK 패킷을 클라이언트로 보낸 후 CLOSW_WAIT 상태로 돌입, 클라이언트는 FIN_WAIT_2 상태가 된다.
+3. 클라이언트로부터 FIN 패킷을 받게 된 서버는 종료에 필요한 작업을 실행하게 되며, 종료할 준비가 완료 되면 클라이언트에 FIN 패킷을 보낸다. 서버는 LAST_ACK 상태가 된다.
+4. 클라이언트는 서버로부터 FIN 패킷을 받게 되면 ACK를 서버로 보내게 되고, 자신은 TIME_WIAT 상태로 변경된다. 일정 시간이 지나면 TIME_WAIT에서 CLOSED가 되고, 최종 ACK를 받은 서버도 CLOSED 상태가 된다.
